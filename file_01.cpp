@@ -15,17 +15,44 @@ void itc_even_parts_list(const vector <int> &mass, vector <int> &mass1){
 }
 
 
+int itc_positive_list(const vector <int> &mass) {
+    int times = 0;
+    for (int n1 = 0; n1 < mass.size(); n1++)
+        if (mass[n1] >= 0)
+            times++;
+    return times;
+}
+
+
+int itc_sl_list(const vector <int> &mass) {
+    int times = 0;
+    for (int n1 = 1; n1 < mass.size(); n1++)
+        if (mass[n1 - 1] < mass[n1])
+            times++;
+    return times;
+}
+
+
+bool itc_same_parts_list(const vector <int> &mass) {
+    for (int n1 = 1; n1 < mass.size(); n1++)
+        if ((mass[n1 - 1] < 0 and mass[n1] < 0) or (mass[n1 - 1] >= 0 and mass[n1] >= 0))
+            return true;
+    return false;
+}
+
+
 int main(){
-    vector <int> mass(9);
-    for (int n1 = 0; n1 < 9; n1++)
-        mass[n1] = n1 + 1;
+    vector <int> mass = {1, 2, 3, 4, 5, 6, 7, 8};
     vector <int> mass1;
     // ---------------
-    itc_even_parts_list(mass, mass1);
+    itc_rshift_list(mass);
+    cout << "---------------------------" << endl;
     //-------------------
     for (int n1 = 0; n1 < mass.size(); n1++)
         cout << mass[n1] << endl;
+    /*
     cout << "------------------------------------" << endl;
     for (int n1 = 0; n1 < mass1.size(); n1++)
         cout << mass1[n1] << endl;
+        */
 }
