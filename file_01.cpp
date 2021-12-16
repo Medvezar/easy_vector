@@ -39,3 +39,14 @@ bool itc_same_parts_list(const vector <int> &mass) {
             return true;
     return false;
 }
+
+
+int main(){
+    vector <int> mass;
+    for (int n1 = 0; n1 < 0; n1++)
+        mass.push_back(n1 + 1);
+    cout << "-------------------" << endl;
+    itc_super_shift_list(mass, 2);
+    for (int n1 = 0; n1 < mass.size(); n1++)
+        cout << mass[n1] << endl;
+}
