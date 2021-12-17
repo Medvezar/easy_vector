@@ -4,7 +4,7 @@
 void itc_even_index_list(const vector <int> &mass,  vector <int> &mass1){
     if (mass.size() > 0)
         for (int n1 = 0; n1 < mass.size(); n1++)
-            if ((n1 + 1) % 2 == 0)
+            if (n1 % 2 == 0)
                 mass1.push_back(mass[n1]);
 }
 
