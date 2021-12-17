@@ -47,18 +47,3 @@ bool itc_same_parts_list(const vector <int> &mass) {
             return true;
     return false;
 }
-
-
-int main(){
-    vector <int> mass(0);
-    vector <int> mass1;
-    for (int n1 = 0; n1 < 0; n1++)
-        mass.push_back(n1 + 1);
-    cout << "-------------------" << endl;
-
-    for (int n1 = 0; n1 < mass1.size(); n1++)
-        cout << mass1[n1] << endl;
-    cout << "_____________________________" << endl;
-    for (int n1 = 0; n1 < mass.size(); n1++)
-        cout << mass[n1] << endl;
-}
